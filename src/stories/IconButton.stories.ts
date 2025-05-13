@@ -35,7 +35,7 @@ type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
   args: {
-    iconPath: 'icon',
+    iconPath: 'https://kr.object.ncloudstorage.com/gandi-cdn/svg/delete_dark.svg',
     alt: 'icon',
   },
 };

@@ -9,9 +9,10 @@ const meta = {
   },
   tags: ['autodocs'],
   argTypes: {
-    onChange: {
-      action: 'changed',
-      description: 'DefaultTextField의 값이 변경될 때 호출되는 이벤트 핸들러',
+    id: {
+      control: 'text',
+      description: 'DefaultTextField의 고유 ID',
+      defaultValue: 'email',
     },
    iconAlt: {
       control: 'text',
@@ -35,9 +36,18 @@ const meta = {
       description: 'DefaultTextField의 에러 메시지',
       defaultValue: '에러메세지는 여기로',
     },
+    onChange: {
+      action: 'changed',
+      description: 'DefaultTextField의 값이 변경될 때 호출되는 이벤트 핸들러',
+    },
     onIconClick: {
       action: 'iconClicked',
       description: 'DefaultTextField의 아이콘 클릭 이벤트 핸들러',
+    },
+    isError: {
+      control: 'boolean',
+      description: 'DefaultTextField의 에러 상태',
+      defaultValue: false,
     },
   },
 } satisfies Meta<typeof DefaultTextField>;
@@ -47,6 +57,7 @@ type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
   args: {
+    id: 'email',
     iconPath: 'icon',
     iconAlt: 'icon',
     placeholder: '텍스트를 입력해주세요.',
@@ -54,5 +65,6 @@ export const Default: Story = {
     errorMessage: '에러메세지는 여기로',
     onChange: () => {},
     onIconClick: () => {},
+    isError: false,
   },
 };

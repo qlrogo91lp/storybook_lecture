@@ -15,3 +15,13 @@
 body {
   font-family: 'Noto Sans KR', sans-serif;
 }
+
+@layer components {
+  .text-field > p{
+    @apply absolute;
+  }
+
+  .navigation-title-wrapper > button {
+    @apply mr-[7px];
+  }
+}
