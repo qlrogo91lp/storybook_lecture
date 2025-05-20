@@ -5,6 +5,10 @@ export default {
     fontFamily: {
       body: ["Noto Sans KR"],
     },
+    /** 왜 안될까? */
+    borderRadius: {
+      "primary-button": "5px",
+    },
     fontSize: {
       xs: [
         "12px",
