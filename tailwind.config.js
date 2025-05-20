@@ -8,6 +8,7 @@ export default {
     /** 왜 안될까? */
     borderRadius: {
       "primary-button": "5px",
+      "tag-button": "17.5px",
     },
     fontSize: {
       xs: [
